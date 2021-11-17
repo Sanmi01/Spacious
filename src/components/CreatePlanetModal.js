@@ -12,21 +12,21 @@ const CreatePlanetModal = ({type, updatePlanetArray}) => {
   };
   const handleShow = () => setShow(true);
   const [planetValues, setPlanetValues] = useState({
-    imageURL: '',
+    img: '',
     name: '',
     info: ''
   });
 
   const handleSubmit = (planetValues) => {
     console.log(planetValues)
-    if(planetValues.imageURL== '' || planetValues.info=='' || planetValues.name=='') {
+    if(planetValues.img== '' || planetValues.info=='' || planetValues.name=='') {
       setError(true)
     } else {
       planetValues.id = 'g-' + (Math.random() * 100000).toFixed(0)
     planetValues.population = (Math.random() * 100000).toFixed(0);
     updatePlanetArray(planetValues)
     setPlanetValues({
-      imageURL: '',
+      img: '',
       name: '',
       info: ''
     })
@@ -35,7 +35,7 @@ const CreatePlanetModal = ({type, updatePlanetArray}) => {
   }
 
   // const planetValues= {
-  //   imageURL: '',
+  //   img: '',
   //   name: '',
   //   info: ''
   // }
@@ -64,9 +64,9 @@ const CreatePlanetModal = ({type, updatePlanetArray}) => {
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Image</Form.Label>
-              <Form.Control type="url" value={planetValues.imageURL} 
+              <Form.Control type="url" value={planetValues.img} 
               onChange={(e) => setPlanetValues({
-                imageURL: e.target.value,
+                img: e.target.value,
                 name: planetValues.name,
                 info: planetValues.info})} 
               placeholder="" />
@@ -80,7 +80,7 @@ const CreatePlanetModal = ({type, updatePlanetArray}) => {
               type="text"
               value={planetValues.name}
               onChange={(e) => setPlanetValues({
-                imageURL: planetValues.imageURL,
+                img: planetValues.img,
                 name: e.target.value,
                 info: planetValues.info})} 
               placeholder="" />
@@ -89,11 +89,24 @@ const CreatePlanetModal = ({type, updatePlanetArray}) => {
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
+            {/* 
+              setPlanetValues({
+                ...planetValues,
+                info: e.target.value
+              })
+
+              updatePlanets(key, e) {
+                setPlanetValues({
+                  ...planetValues,
+                  [key]: [e.target.value]
+                })
+              }
+             */}
               <Form.Label>Description</Form.Label>
               <Form.Control as="textarea" rows={3}
               value={planetValues.info}
               onChange={(e) => setPlanetValues({
-                imageURL: planetValues.imageURL,
+                img: planetValues.img,
                 name: planetValues.name,
                 info: e.target.value})} />
             </Form.Group>
