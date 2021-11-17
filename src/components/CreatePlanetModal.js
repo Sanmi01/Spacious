@@ -17,7 +17,6 @@ const CreatePlanetModal = ({type, updatePlanetArray}) => {
   });
 
   const handleSubmit = (planetValues) => {
-    console.log(planetValues)
     if(planetValues.img=== '' || planetValues.info==='' || planetValues.name==='') {
       setError(true)
     } else {

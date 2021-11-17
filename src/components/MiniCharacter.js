@@ -1,8 +1,6 @@
 import React from 'react'
 
 const MiniCharacter = ({ character }) => {
-    console.log(character)
-    console.log(window.location.pathname)
     return (
         <div className="d-flex">
             <div className="mini-character my-2">

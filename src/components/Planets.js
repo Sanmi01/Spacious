@@ -24,10 +24,8 @@ const Planets = () => {
     const updatePlanetArray = (values) => {
         // const _planetItems = planetItems.concat([values])
         // _planetItems.push(values)
-        // console.log(values)
         // values.id = 'g-' + (Math.random() * 100000).toFixed(0)
         setPlanetItems([...planetItems, values])
-        console.log(planetItems)
     }
 
     const deletePlanetArray = () => {
