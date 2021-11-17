@@ -1,7 +1,6 @@
-import React, { useState, setState } from "react";
+import React, { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 import { PlusCircleFill } from "react-bootstrap-icons";
-import { planetItems } from '../data'
 
 const CreatePlanetModal = ({type, updatePlanetArray}) => {
   const [show, setShow] = useState(false);
@@ -19,7 +18,7 @@ const CreatePlanetModal = ({type, updatePlanetArray}) => {
 
   const handleSubmit = (planetValues) => {
     console.log(planetValues)
-    if(planetValues.img== '' || planetValues.info=='' || planetValues.name=='') {
+    if(planetValues.img=== '' || planetValues.info==='' || planetValues.name==='') {
       setError(true)
     } else {
       planetValues.id = 'g-' + (Math.random() * 100000).toFixed(0)

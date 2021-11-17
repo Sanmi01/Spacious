@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Navbar, Row, Card, CardGroup} from 'react-bootstrap';
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import { Container, Row} from 'react-bootstrap';
+import { Route, Routes} from 'react-router-dom';
 import NavigationBar from './components/Navbar';
 import Tabs from './components/Tabs';
 import Planets from './components/Planets';
@@ -24,7 +24,7 @@ function App() {
     <Container className="p-5">
     <NavigationBar />
     <div className="img-loader-div w-100 d-flex justify-content-center align-items-center">
-      <img src={Loader} />
+      <img src={Loader} alt="loader-pic" />
     </div>
     </Container>
     </>}

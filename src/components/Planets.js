@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
-import { Button, Offcanvas} from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Offcanvas } from 'react-bootstrap';
 import { planetItems as PT } from '../data';
 import { characterItems } from '../data';
 import Planet from './Planet';
 import MiniCharacter from './MiniCharacter';
-import { Trash } from 'react-bootstrap-icons';
 import CreatePlanetModal from './CreatePlanetModal';
 import CreateCharacterModal from './CreateCharacterModal';
 import ClearAllPlanetModal from './ClearAllPlanetModal';
@@ -13,7 +12,7 @@ import Loader from '../strapi-assets/assets/planet-loader.svg';
 const Planets = () => {
     const [show, setShow] = useState(false);
     const [planetInfo, setPlanetInfo] = useState('');
-    const [buttonInfo, setButtonInfo] = useState(true)
+    const buttonInfo = true;
     const [planetItems, setPlanetItems] = useState(PT)
   
     const handleClose = () => setShow(false);
@@ -37,10 +36,10 @@ const Planets = () => {
 
     return (
         <>
-        {planetItems.length == 0 ? (
+        {planetItems.length === 0 ? (
           <>
           <div className="img-loader-div w-100 d-flex flex-column justify-content-center align-items-center">
-            <img src={Loader} />
+            <img src={Loader} alt="loader-pic" />
             <h1>Space doesn’t have to be so empty.</h1>
             <CreatePlanetModal type={buttonInfo} updatePlanetArray={updatePlanetArray} />
           </div>

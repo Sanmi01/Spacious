@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Button, Offcanvas, Form } from "react-bootstrap";
+import { Offcanvas, Form } from "react-bootstrap";
 import { characterItems } from "../data";
 import Character from "./Character";
-import { PlusCircleFill } from "react-bootstrap-icons";
 import CreateCharacterModal from "./CreateCharacterModal";
 import MiniCharacter from "./MiniCharacter";
 

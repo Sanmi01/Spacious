@@ -10,17 +10,11 @@ const CreateCharacterModal = () => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const options = [
-      { value: 'chocolate', label: 'Chocolate' },
-      { value: 'strawberry', label: 'Strawberry' },
-      { value: 'vanilla', label: 'Vanilla' }
-    ]
     const chOptions = characterItems;
-    const [field, setField] = useState([]);
 
     return (
         <>
-        {window.location.pathname == "/" ? (
+        {window.location.pathname === "/" ? (
           <p><Plus className="plus-icon" onClick={handleShow} size={36}/></p>
         ) : (
           <PlusCircleFill
