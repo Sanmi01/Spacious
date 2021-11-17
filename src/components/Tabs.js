@@ -9,10 +9,10 @@ const Tabs = () => {
     return (
         <Nav variant="pills" className="px-4" >
   <Nav.Item>
-    <NavLink className={`navLink ${ ["/Spacious/", ""].includes(location.pathname) ? "active" : "navLink" }`} to="/">PLANETS</NavLink>
+    <NavLink className={`navLink ${ ["/Spacious/", ""].includes(location.pathname) ? "active" : "navLink" }`} to="/Spacious">PLANETS</NavLink>
   </Nav.Item>
   <Nav.Item>
-    <NavLink className={`navLink ${location.pathname === "/Spacious/characters" ? "active" : "navLink" }`} to="/characters">CHARACTERS</NavLink>
+    <NavLink className={`navLink ${location.pathname === "/Spacious/characters" ? "active" : "navLink" }`} to="/Spacious/characters">CHARACTERS</NavLink>
   </Nav.Item>
 </Nav>
     )
