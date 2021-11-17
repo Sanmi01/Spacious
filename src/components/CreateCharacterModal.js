@@ -14,7 +14,7 @@ const CreateCharacterModal = () => {
 
     return (
         <>
-        {window.location.pathname === "/" ? (
+        {window.location.pathname === "/Spacious/" ? (
           <p><Plus className="plus-icon" onClick={handleShow} size={36}/></p>
         ) : (
           <PlusCircleFill

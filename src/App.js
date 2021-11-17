@@ -36,8 +36,8 @@ function App() {
       </Row>
         <div className="box position-relative">
         <Routes>
-          <Route path="/" element={<Planets />} />
-          <Route path="/characters" element={<Characters />} />
+          <Route path="/Spacious/" element={<Planets />} />
+          <Route path="/Spacious/characters" element={<Characters />} />
         </Routes>
       </div>
     </Container>}

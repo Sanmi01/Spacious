@@ -8,7 +8,7 @@ const MiniCharacter = ({ character }) => {
             </div>
             <div className="p-2 d-flex flex-column align-self-center">
                 <p className="mini-info-top">{character.name}</p>
-                {window.location.pathname === "/characters" ? (
+                {window.location.pathname === "/Spacious/characters" ? (
                     <p className="mini-info-bottom">{character.info}</p>
                 ): (
                     <p className="mini-info-bottom">{character.friends} friends</p>
