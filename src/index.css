@@ -201,7 +201,7 @@ line-height: 18px;
     min-width: 50vw;
     background-color: #FFFFFF;
 box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-border-radius: 32px;
+border-radius: 36px;
 }
 
 .modal-dialog .modal-header, div.modal-content, div.modal-footer {
@@ -234,7 +234,7 @@ border-radius: 8px;
 }
 
 .modal-content {
-    padding: 2.5em;
+    padding: 3em;
 }
 
 .btn.btn-secondary {
