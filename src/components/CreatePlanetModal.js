@@ -51,12 +51,12 @@ const CreatePlanetModal = ({type, updatePlanetArray}) => {
     }
 
       <PlusCircleFill
-        className="position-absolute bottom-0 end-0"
+        className="position-absolute bottom-0 end-0 plus-circle-icon"
         onClick={handleShow}
         size={48}
       />
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} centered onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Planet</Modal.Title>
         </Modal.Header>
@@ -104,10 +104,10 @@ const CreatePlanetModal = ({type, updatePlanetArray}) => {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Cancel
+            CANCEL
           </Button>
           <Button variant="primary" onClick={() =>handleSubmit(planetValues)}>
-            Create Planet
+            CREATE PLANET
           </Button>
         </Modal.Footer>
       </Modal>

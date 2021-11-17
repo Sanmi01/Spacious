@@ -4,7 +4,7 @@ import { planetItems as PT } from '../data';
 import { characterItems } from '../data';
 import Planet from './Planet';
 import MiniCharacter from './MiniCharacter';
-import { PlusSquare, Trash } from 'react-bootstrap-icons';
+import { Trash } from 'react-bootstrap-icons';
 import CreatePlanetModal from './CreatePlanetModal';
 import CreateCharacterModal from './CreateCharacterModal';
 import ClearAllPlanetModal from './ClearAllPlanetModal';
@@ -62,10 +62,10 @@ const Planets = () => {
             <Offcanvas.Title>{planetInfo.name}</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <p>{planetInfo.info}</p>
-            <p>Population <br />{planetInfo.population}</p>
-            <div className="d-flex justify-content-between">
-              <p>CHARACTERS</p>
+            <p className="info">{planetInfo.info}</p>
+            <p className="my-3"><span className="info-top">Population</span> <br /><span className="info-below">{planetInfo.population}</span></p>
+            <div className="d-flex justify-content-between align-items-center">
+              <p className="mini-header">CHARACTERS</p>
               <CreateCharacterModal />
           </div>
           <div>

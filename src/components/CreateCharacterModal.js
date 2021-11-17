@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Modal, Button, Form, Col } from "react-bootstrap";
-import { PlusCircleFill, PlusSquare } from "react-bootstrap-icons";
+import { PlusCircleFill, Plus } from "react-bootstrap-icons";
 import { characterItems } from '../data';
 import Select from 'react-select';
 
@@ -21,7 +21,7 @@ const CreateCharacterModal = () => {
     return (
         <>
         {window.location.pathname == "/" ? (
-          <p><PlusSquare onClick={handleShow} size={48}/></p>
+          <p><Plus className="plus-icon" onClick={handleShow} size={36}/></p>
         ) : (
           <PlusCircleFill
         className="position-absolute bottom-0 end-0"
@@ -31,11 +31,11 @@ const CreateCharacterModal = () => {
         )}
       
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} centered onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Character</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="">
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Image</Form.Label>
@@ -66,10 +66,10 @@ const CreateCharacterModal = () => {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Cancel
+            CANCEL
           </Button>
           <Button variant="primary" onClick={handleClose}>
-            Create Character
+            CREATE CHARACTER
           </Button>
         </Modal.Footer>
       </Modal>

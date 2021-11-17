@@ -18,7 +18,7 @@ const Characters = () => {
 
   return (
     <>
-    <Form.Select aria-label="Default select example" className="trash-icon position-absolute" style={{ width: 'min-content'}}>
+    <Form.Select aria-label="Default select example" className="select-planet position-absolute" style={{ width: 'min-content'}}>
   <option value="0">Planet:All</option>
   <option value="1">Planet:Alpha</option>
   <option value="2">Planet:Beta</option>
@@ -47,16 +47,17 @@ const Characters = () => {
           <Offcanvas.Title>{characterInfo.name}</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <p>{characterInfo.info}</p>
-          <div className="d-flex justify-content-between">
+          <p className="info">{characterInfo.info}</p>
+          <div className="my-3 d-flex justify-content-between">
             <div>
-              <p>Planet <br /> Alpha</p>
+              <p><span className="info-top">Planet</span> <br /> <span className="info-below">Alpha</span></p>
             </div>
             <div>
-              <p>Friends <br /> {characterInfo.population}</p>
+              <p><span className="info-top">Friends</span> <br /> <span className="info-below">{characterInfo.friends}</span></p>
             </div>
           </div>
           <div>
+          <p className="mini-header">FRIENDS</p>
             {characterItems.map((character) => (
               <MiniCharacter character={character} key={character.id} />
             ))}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Modal} from 'react-bootstrap';
-import { PlusSquare, Trash } from 'react-bootstrap-icons';
+import {  Trash } from 'react-bootstrap-icons';
 
 const ClearAllPlanetModal = ({deletePlanetArray}) => {
     const [show, setShow] = useState(false);
