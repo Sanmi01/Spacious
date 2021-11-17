@@ -19,7 +19,7 @@ const ClearAllPlanetModal = ({deletePlanetArray}) => {
       </Button> */}
       <Trash onClick={handleShow} size={48} className="trash-icon position-absolute"/>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} centered onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Clear All Planets</Modal.Title>
         </Modal.Header>
